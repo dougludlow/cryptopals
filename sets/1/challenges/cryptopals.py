@@ -11,4 +11,8 @@ def fixed_xor(s1, s2):
     """XORs two hex strings."""
     return hexlify(''.join(chr(ord(c1) ^ ord(c2)) for c1, c2 in zip(unhexlify(s1[-len(s2):]), unhexlify(s2))))
 
+def single_char_xor(s, c):
+    """XORs a hex string with a single character."""
+    return ''.join(chr(ord(c1) ^ ord(c)) for c1 in unhexlify(s))
+
 
